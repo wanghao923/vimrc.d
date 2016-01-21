@@ -1,4 +1,4 @@
-# Yiguang's Vimrc
+# wang hao's Vimrc
 
 Mainly forked the major basic configuration of [amix](https://github.com/amix/vimrc). Used for
 **Python Developing**, **Ruby Assistance** is also in plan. 
@@ -8,18 +8,11 @@ Mainly forked the major basic configuration of [amix](https://github.com/amix/vi
 Local Install
 
 ```shell
-$ git clone https://github.com/lukmy/vimrc.d ~/vimrc.d
+$ git clone https://github.com/wanghao923/vimrc.d.git ~/vimrc.d
 
 $ cd ~/vimrc.d
 $ ./install.sh
 ```
-
-Net Install
-
-```shell
-$ curl https://raw.githubusercontent.com/lukmy/vimrc.d/master/net_install.sh | sh
-```
-
 ## Shortcuts
 
 `<leader>` means `<mapleader>` in vim, in this situation it is `,`. All shortcuts below only works in **Normal Mode**.
