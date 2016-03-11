@@ -36,20 +36,16 @@ noremap <leader>r :CtrlPBufTag<CR>
 let g:ctrlp_switch_buffer = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => PEP8 indent
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'hynek/vim-python-pep8-indent'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Jedi
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'davidhalter/jedi-vim'
 " Shortcuts
+let g:jedi#goto_command = "<C-C>d"
 let g:jedi#goto_assignments_command = "<C-C>g"
-let g:jedi#goto_definitions_command = "<C-C>d"
+let g:jedi#goto_definitions_command = ""
 let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<C-C>n"
-let g:jedi#completions_command = "<C-N>"
+let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<C-C>r"
 " Configurations
 let g:jedi#use_tabs_not_buffers = 0
@@ -58,24 +54,14 @@ let g:jedi#use_tabs_not_buffers = 0
 " => Vim Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'bling/vim-airline'
-
 let g:airline_left_sep = '>'
 let g:airline_right_sep = '<'
-
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
 let g:airline_symbols.linenr = '>>'
 let g:airline_symbols.branch = '<<'
 let g:airline_symbols.whitespace = 'Ξ'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Git Plugin
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'tpope/vim-fugitive'
-cabbrev git <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Git' : 'git')<CR>
-Plugin 'gregsexton/gitv'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => EasyMotion
@@ -103,31 +89,33 @@ endfunc
 cabbrev work <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'call ListWorkStatus()' : 'work')<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Salt
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'saltstack/salt-vim'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color scheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'tomasr/molokai'
 let g:molokai_original = 1
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Tmuxline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'edkolev/tmuxline.vim'
-let g:airline#extensions#tmuxline#enabled = 0
-"let g:tmuxline_separators = {
-"            \ 'left' : '>',
-"            \ 'left_alt': '>>',
-"            \ 'right' : '<'
-"            \ 'right_alt' : '<<',
-"            \ 'space' : ' '}
-let g:tmuxline_preset = 'full'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => python ifold
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'vim-scripts/python_ifold'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Unite
+" => python pep8
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/vimproc.vim'
+Plugin 'vim-scripts/pep8'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-ipython
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'ivanov/vim-ipython'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-python-test-runner
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'JarrodCTaylor/vim-python-test-runner'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => tpope/vim-fugitive
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'tpope/vim-fugitive'
+

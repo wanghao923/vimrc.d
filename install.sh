@@ -19,7 +19,4 @@ case $SHELL in
     *)
         ;;
 esac
-echo "source $HOME/vimrc.d/shell_enhancement.sh" >> $target
-
-mkdir -p ~/.vim/plugin
-cp -r ./my_plugins/* ~/.vim/plugin/
+#echo "source $HOME/vimrc.d/shell_enhancement.sh" >> $target

@@ -574,6 +574,3 @@ endfunc
 " => Special Filetype amend
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd! bufnewfile,bufreadpost,bufwritepost *.md set ft=markdown
-
-" set fold
-set foldmethod=indent
