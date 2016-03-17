@@ -118,4 +118,3 @@ Plugin 'JarrodCTaylor/vim-python-test-runner'
 " => tpope/vim-fugitive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'tpope/vim-fugitive'
-
